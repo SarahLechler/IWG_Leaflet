@@ -4,7 +4,7 @@ function checkScaleForCalculation(event, intendedCalculation) {
   const topFeature = topBottomProperties.value;
   const bottomFeature = topBottomProperties.bottomValue;
 
-    if(calculationAllowedForScale(topFeature.scale, intendedCalculation)){
+    if(calculationAllowedForScale(topBottomProperties.scale, intendedCalculation)){
       return true;
     }
     else {
@@ -14,6 +14,8 @@ function checkScaleForCalculation(event, intendedCalculation) {
 
 
 function calculationAllowedForScale(scale, intendedCalculation) {
+  console.log("scale: " + scale);
+  console.log("intendedCalculation " + intendedCalculation);
   const allowedCalculation = scaleNiveauCalculation[scale];
   return allowedCalculation.find(element => {
     return element == intendedCalculation;
