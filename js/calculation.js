@@ -1,7 +1,8 @@
 function checkScaleForCalculation(event, intendedCalculation) {
   const topBottomProperties = getPropertiesOfBothFeatures(event);
-  const topFeature = topBottomProperties.top;
-  const bottomFeature = topBottomProperties.bottom;
+  console.log(JSON.stringify(topBottomProperties));
+  const topFeature = topBottomProperties.value;
+  const bottomFeature = topBottomProperties.bottomValue;
 
     if(calculationAllowedForScale(topFeature.scale, intendedCalculation)){
       return true;
