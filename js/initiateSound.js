@@ -1,4 +1,4 @@
-/* 
+/*
 *
  */
 
@@ -8,7 +8,7 @@ var dimension = audiocontext.createStereoPanner();
 
 
 
-function createSound(pianoKey, startTime, endTime, direction) { startTime is always audiocontext.currentTime and endTime audiocontext.currentTime + how long it should be played
+function createSound(pianoKey, startTime, endTime, direction) { //startTime is always audiocontext.currentTime and endTime audiocontext.currentTime + how long it should be played
     var g = audiocontext.createGain();
     g.gain.exponentialRampToValueAtTime(1.0/*0.00001*/, audiocontext.currentTime + 0.04);
     createDimension(direction);
@@ -36,7 +36,7 @@ function calculateFrequency(n) {
 ;
 
 
-function createDimension (direction) { // expects either l for left and right for r 
+function createDimension (direction) { // expects either l for left and right for r
 
     /*dimension.panningModel = 'HRTF';
      dimension.distanceModel = 'inverse';
@@ -46,11 +46,11 @@ function createDimension (direction) { // expects either l for left and right fo
      dimension.coneInnerAngle = 360;
      dimension.coneOuterAngle = 0;
      dimension.coneOuterGain = 0;
-     
+
      var listener = audiocontext.listener;
      listener.setOrientation(0, 0, -1, 0, 1, 0);
      listener.setPosition(Math.floor(window.innerWidth / 2), Math.floor(window.innerHeight / 2), 300);
-     
+
      */
     if (direction === "l") {
         dimension.pan = -1;
