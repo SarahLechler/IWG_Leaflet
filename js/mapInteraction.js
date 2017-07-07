@@ -1,5 +1,7 @@
 var info = L.control(); // Used to display on mouseover property name and density
 
+var isSearching = false;
+
 var pressedKeys = {
   difference: false,
   equal: false,
@@ -19,13 +21,20 @@ var mapsToBeCompared = { // stores the leaflet-GeoJson and the raw GeoJson. Want
   top: ""
 };
 
+var searches = function() {
+    isSearching = true;
+}
+
+var notSearching = function(){
+    isSearching = false;
+}
 
 $(document).on("keypress", function(e) {
   var code = e.keyCode || e.which;
   console.log(code)
-
-  
-  
+if(isSearching == true){
+    return;
+}
   if(code == 105){ //73 stands for 'i' like informaion
         responsiveVoice.speak("First Map, countries of the united states. Property, people per squarekilometer. Secound Map, countries of the united states");
     }
@@ -40,6 +49,21 @@ $(document).on("keypress", function(e) {
             dragging=true;
         }  
     }
+    if (code === 43) { 
+        document.getElementById("myInput").value = '';
+        
+        $( "#myInput" ).focus();
+    
+    }else
+        
+        if (code === 13) { 
+            if(document.getElementById("myInput").focus == true){
+                console.log("hallo");
+                console.log(document.getElementById(myTable));
+                
+                //responsiveVoice.speak();
+            }
+    }else
   if (code === 100) { //100 stands for 'd', like difference
     pressedKeys.difference = !pressedKeys.difference;
     let storePress = pressedKeys.difference;
