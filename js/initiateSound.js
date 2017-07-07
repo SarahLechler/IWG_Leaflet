@@ -1,7 +1,6 @@
 /*
 *
  */
-
 var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audiocontext = new AudioContext();
 var dimension = audiocontext.createStereoPanner();
