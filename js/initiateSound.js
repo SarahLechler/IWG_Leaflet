@@ -1,12 +1,6 @@
-/* 
- *
- */
-
 var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audiocontext = new AudioContext();
 var dimension = audiocontext.createStereoPanner();
-
-
 
 function createSound(pianoKey, startTime, endTime, direction) { // startTime is always audiocontext.currentTime and endTime audiocontext.currentTime + how long it should be played
     var g = audiocontext.createGain();
@@ -42,8 +36,9 @@ function createDimension(direction) { // value between -1 (thats left) and 1 (ri
 
     if (-1 <= direction <= 1 ) {
         dimension.pan.value = direction;
-    }  else
+    }  else {
         throw new Error("no such direction");
+    }
     console.log(dimension);
     return dimension;
 }
