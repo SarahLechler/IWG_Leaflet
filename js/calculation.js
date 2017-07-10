@@ -29,7 +29,7 @@ function differenceTopBottomFratureValues(event) {
     const bottomValue = topBottomProperties.bottomValue;
     console.log("top : " +topValue);
     console.log("bottom : "+ bottomValue);
-    return topValue - bottomValue;
+    return Math.abs(topValue - bottomValue);
   }
   catch (error) {
     console.log("ERROR, NOT BOTH FEATURES ARE GIVEN")
