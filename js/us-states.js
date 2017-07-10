@@ -3214,7 +3214,8 @@ let statesData = {
       "properties": {
         "scale": "rational",
         "name": "New Hampshire",
-        "value": 147,
+        "value": 68,
+        "bottomValue": 13,
         "unit": "people per squarekilometer"
       },
       "geometry": {
