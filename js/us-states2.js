@@ -7,7 +7,7 @@ let statesData2 = {
       "id": "01",
       "properties": { "scale": "rational",
         "name": "Alabama",
-        "value": 100.65
+        "value": 11
       ,"unit": "people per squarekilometer" ,"unit": "people per squarekilometer" }, "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -54,7 +54,7 @@ let statesData2 = {
       "id": "02",
       "properties": { "scale": "rational",
         "name": "Alaska",
-        "value": 11.264
+        "value": 38
       ,"unit": "people per squarekilometer" ,"unit": "people per squarekilometer" ,"unit": "people per squarekilometer" }, "geometry": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -1296,7 +1296,7 @@ let statesData2 = {
       "id": "04",
       "properties": { "scale": "rational",
         "name": "Arizona",
-        "value": 67.05
+        "value": 30
       ,"unit": "people per squarekilometer" ,"unit": "people per squarekilometer" }, "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -1342,7 +1342,7 @@ let statesData2 = {
       "id": "05",
       "properties": { "scale": "rational",
         "name": "Arkansas",
-        "value": 66.43
+        "value": 39
       ,"unit": "people per squarekilometer" ,"unit": "people per squarekilometer" }, "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -1393,7 +1393,7 @@ let statesData2 = {
       "id": "06",
       "properties": { "scale": "rational",
         "name": "California",
-        "value": 251.7
+        "value": 24
       ,"unit": "people per squarekilometer" ,"unit": "people per squarekilometer" }, "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -1500,7 +1500,7 @@ let statesData2 = {
       "id": "08",
       "properties": { "scale": "rational",
         "name": "Colorado",
-        "value": 59.33
+        "value": 15
       ,"unit": "people per squarekilometer" ,"unit": "people per squarekilometer" }, "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -1530,7 +1530,7 @@ let statesData2 = {
       "id": "09",
       "properties": { "scale": "rational",
         "name": "Connecticut",
-        "value": 749.1
+        "value": 10
       ,"unit": "people per squarekilometer" ,"unit": "people per squarekilometer" }, "geometry": {
         "type": "Polygon",
         "coordinates": [
