@@ -22,48 +22,48 @@ var mapsToBeCompared = { // stores the leaflet-GeoJson and the raw GeoJson. Want
 };
 
 var searches = function() {
-    isSearching = true;
+  isSearching = true;
 }
 
-var notSearching = function(){
-    isSearching = false;
+var notSearching = function() {
+  isSearching = false;
 }
 
 $(document).on("keypress", function(e) {
   var code = e.keyCode || e.which;
   console.log(code)
-if(isSearching == true){
+  if (isSearching == true) {
     return;
-}
-  if(code == 105){ //73 stands for 'i' like informaion
-        responsiveVoice.speak("First Map, countries of the united states. Property, people per squarekilometer. Secound Map, countries of the united states");
+  }
+  if (code == 105) { //73 stands for 'i' like informaion
+    responsiveVoice.speak("First Map, countries of the united states. Property, people per squarekilometer. Secound Map, countries of the united states");
+  }
+  if (code == 109) { //68 stands for 'm'
+    if (dragging) {
+      console.log("hi");
+      map.dragging.disable();
+      map.setView([37.8, -96], 4);
+      dragging = false;
+    } else {
+      map.dragging.enable();
+      dragging = true;
     }
-    if(code == 109){ //68 stands for 'm'
-        if(dragging){
-            console.log("hi");
-            map.dragging.disable();
-            map.setView([37.8, -96], 4);
-            dragging=false;
-        }else{
-            map.dragging.enable();
-            dragging=true;
-        }  
+  }
+  if (code === 43) {
+    document.getElementById("myInput").value = '';
+
+    $("#myInput").focus();
+
+  } else
+
+  if (code === 13) {
+    if (document.getElementById("myInput").focus == true) {
+      console.log("hallo");
+      console.log(document.getElementById(myTable));
+
+      //responsiveVoice.speak();
     }
-    if (code === 43) { 
-        document.getElementById("myInput").value = '';
-        
-        $( "#myInput" ).focus();
-    
-    }else
-        
-        if (code === 13) { 
-            if(document.getElementById("myInput").focus == true){
-                console.log("hallo");
-                console.log(document.getElementById(myTable));
-                
-                //responsiveVoice.speak();
-            }
-    }else
+  } else
   if (code === 100) { //100 stands for 'd', like difference
     pressedKeys.difference = !pressedKeys.difference;
     let storePress = pressedKeys.difference;
@@ -89,8 +89,7 @@ if(isSearching == true){
     let storePress = pressedKeys.add;
     setAllKeysFalse(); // Make sure that only one calculation is enabled.
     pressedKeys.add = storePress;
-  }
-  else if (code === 113) { // 113 stands for q like quotient
+  } else if (code === 113) { // 113 stands for q like quotient
     pressedKeys.quotient = !pressedKeys.quotient;
     let storePress = pressedKeys.quotient;
     setAllKeysFalse(); // Make sure that only one calculation is enabled.
@@ -111,6 +110,7 @@ if(isSearching == true){
   };
 });
 
+
 function setAllKeysFalse() {
   for (let key in pressedKeys) {
     if (pressedKeys.hasOwnProperty(key)) {
@@ -119,9 +119,11 @@ function setAllKeysFalse() {
   }
 };
 
+
+
 function getPropertiesOfBothFeatures(event) {
-    console.log(event.target.feature.properties);
-    return event.target.feature.properties;
+  console.log(event.target.feature.properties);
+  return event.target.feature.properties;
 };
 
 
@@ -142,9 +144,9 @@ function setActionOnEachGeoJSONAndAddThemToMapsToBeCompared(map) {
 
 function addEventsToFeatures(feature, layer) {
   layer.on({
-    mouseover: mouseover, // Could be sound for new Feature
+    mouseover: visualAndSoundHighlightFeature, // Could be sound for new Feature
     mouseout: resetHighlight,
-    click: getPropertiesOfBothFeatures
+    click: compareFeatures
   });
 };
 
@@ -154,10 +156,10 @@ function addMapsToMapsToBeCompared(topMap) {
   mapsToBeCompared.top = topMap;
 };
 
-var mouseOut = function(){
-    responsiveVoice.speak("You left the map ");
+var mouseOut = function() {
+  responsiveVoice.speak("You left the map ");
 }
 
-var mouseIn = function(){
-    responsiveVoice.speak("You entered the map ");
+var mouseIn = function() {
+  responsiveVoice.speak("You entered the map ");
 }

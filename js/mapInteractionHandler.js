@@ -1,10 +1,13 @@
-function mouseover(event) {
+function visualAndSoundHighlightFeature(event) {
   var layer = event.target;
-  pressedKeys.navigate = false;
   navigationSound.stop();
   highlightFeature(layer);
   playBorderSound();
+};
 
+function compareFeatures(event) {
+  var layer = event.target;
+  pressedKeys.navigate = false;
 
   if (pressedKeys.difference) {
     try {
@@ -14,28 +17,22 @@ function mouseover(event) {
     } catch (error) {
       console.log(error);
     }
-  }
-  else if (pressedKeys.equal) {
+  } else if (pressedKeys.equal) {
     checkScaleForCalculation(event, "equal");
     equalityTopBottomFratureValues(event);
-  }
-  else if (pressedKeys.greater) {
+  } else if (pressedKeys.greater) {
     checkScaleForCalculation(event, "greater");
     greaterTopBottomFratureValues(event);
-  }
-  else if (pressedKeys.smaller) {
+  } else if (pressedKeys.smaller) {
     checkScaleForCalculation(event, "smaller");
     smallerTopBottomFratureValues(event);
-  }
-  else if (pressedKeys.add) {
+  } else if (pressedKeys.add) {
     checkScaleForCalculation(event, "add");
     addTopBottomFratureValues(event);
-  }
-  else if(pressedKeys.quotient) {
+  } else if (pressedKeys.quotient) {
     checkScaleForCalculation(event, "quotient");
     quotientTopBottomFratureValues(event);
-  }
-   else {
+  } else {
     sayPropertyName(layer);
     sayPropertyValueAndUnit(layer);
   }
