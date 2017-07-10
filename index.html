@@ -51,14 +51,14 @@
 <script>    $(document).ready(function () {
        var tr;
        for (var i = 0; i < statesData.features.length; i++) {
-           var difference = statesData2.features[i].properties.value-statesData.features[i].properties.value;
+           var difference = statesData.features[i].properties.value-statesData.features[i].properties.bottomValue;
            difference = Math.round(difference);
            id=  statesData.features[i].id;
            tr = $('<tr/>');
            tr.append("<td>" + id + "</td>");
            tr.append("<td onclick = "+"test("+i+")"+">" + statesData.features[i].properties.name + "</td>");
            tr.append("<td>" + statesData.features[i].properties.value + "</td>");
-           tr.append("<td>" + statesData2.features[i].properties.value + "</td>");
+           tr.append("<td>" + statesData.features[i].properties.bottomValue + "</td>");
            tr.append("<td>" + difference + "</td>");
 
            $('table').append(tr);
@@ -67,8 +67,8 @@
 
     var test = function(i){
         var valueStringOne = statesData.features[i].properties.value.toString();
-        var valueStringTwo = statesData2.features[i].properties.value.toString();
-        var difference =  (statesData2.features[i].properties.value -  statesData.features[i].properties.value).toString();
+        var valueStringTwo = statesData.features[i].properties.bottomValue.toString();
+        var difference =  (statesData.features[i].properties.bottomValue -  statesData.features[i].properties.value).toString();
 
         responsiveVoice.speak(statesData.features[i].properties.name);
         console.log(statesData.features[i].properties.value);
