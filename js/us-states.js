@@ -1,6 +1,6 @@
 // Taken from: http://leafletjs.com/examples/choropleth/us-states.js
 
-let statesData2 = {
+let statesData = {
   "type": "FeatureCollection",
   "features": [{
       "type": "Feature",
