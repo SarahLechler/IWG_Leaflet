@@ -1560,7 +1560,7 @@ let statesData2 = {
       "id": "10",
       "properties": { "scale": "rational",
         "name": "Delaware",
-        "value": 474.3
+        "value": 20
       ,"unit": "people per squarekilometer" ,"unit": "people per squarekilometer" }, "geometry": {
         "type": "Polygon",
         "coordinates": [
