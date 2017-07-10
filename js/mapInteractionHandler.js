@@ -12,8 +12,7 @@ function compareFeatures(event) {
   if (pressedKeys.difference) {
     try {
       checkScaleForCalculation(event, "difference");
-      differenceTopBottomFratureValues(event);
-
+      singleValueToSound(differenceTopBottomFratureValues(event));
     } catch (error) {
       console.log(error);
     }
@@ -28,10 +27,11 @@ function compareFeatures(event) {
     smallerTopBottomFratureValues(event);
   } else if (pressedKeys.add) {
     checkScaleForCalculation(event, "add");
-    addTopBottomFratureValues(event);
+    console.log("ADDITION IS DISABLED DUE TO SAFTY");
+    //singleValueToSound(addTopBottomFratureValues(event));
   } else if (pressedKeys.quotient) {
     checkScaleForCalculation(event, "quotient");
-    quotientTopBottomFratureValues(event);
+    singleValueToSound(quotientTopBottomFratureValues(event));
   } else {
     sayPropertyName(layer);
     sayPropertyValueAndUnit(layer);
