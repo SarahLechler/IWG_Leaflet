@@ -33,15 +33,15 @@ var notSearching = function() {
 $(document).on("keypress", function(e) {
   var code = e.keyCode || e.which;
   console.log(code)
-  
 
-  
-  
-  
+
+
+
+
   //if (isSearching == true) {
   //  return;
   //}
-  if (code == 105) { //73 stands for 'i' like informaion
+  if (code == 105 && !searchNavi) { //73 stands for 'i' like informaion
     responsiveVoice.speak("First Map, countries of the united states. Property, people per squarekilometer. Secound Map, countries of the united states");
   }
   if (code == 109) { //68 stands for 'm'
@@ -100,7 +100,7 @@ $(document).on("keypress", function(e) {
     setAllKeysFalse(); // Make sure that only one calculation is enabled.
     pressedKeys.quotient = storePress;
   } else if (code === 110) { //110 stands for 'n', like navigate
-      
+
     let storePress = pressedKeys.navigate;
     setAllKeysFalse(); // Make sure that only one calculation is enabled.
     pressedKeys.navigate = storePress;
@@ -120,15 +120,15 @@ $(document).on("keypress", function(e) {
       //#################################################################################################################
       //#################################################################################################################
       //#################################################################################################################
-      
+
     let storePress = pressedKeys.searchNavi; // storePress = false
 
     setAllKeysFalse(); // Make sure that only one calculation is enabled.
 
     pressedKeys.navigate = storePress;
-      
+
     nearestFeatureToMouseOnMap = null; // Delete it so it is calculated agin after a new press of null
-      
+
     pressedKeys.searchNavi = !pressedKeys.searchNavi;
     console.log(pressedKeys.searchNavi);
 
@@ -136,11 +136,11 @@ $(document).on("keypress", function(e) {
     if (!pressedKeys.searchNavi){ // If nafigatoin stops, stop sound
       console.log("stopps now");
       navigationSound.stop();
-        
+
     } else { // If navigation starts
-        
+
       navigationSound.play();
-        
+
       navigationSound.frequency = 0;
     }
       //#################################################################################################################
