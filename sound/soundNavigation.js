@@ -1,25 +1,30 @@
 const octaven = [{
   min: 0,
   max: 10,
-  frq: 200
+  frq: navigationFrequency(20)
 }];
 
 (function() {
   let freqence = 200
   let add = 0;
-  for (let i = 10; i < 2500; i = i + 10) {
+  let addOct = 24;
+  for (let i = 10; i < 600; i = i + 10) {
     let temp = {};
     temp["min"] = i + 1;
     add = add + 10;
     temp["max"] = i + add;
-    freqence = freqence + 10;
+    freqence = navigationFrequency(addOct);
+    addOct += 1;
     temp["frq"] = freqence
     octaven.push(temp);
   }
  // console.log(octaven)
 })();
 
-
+function navigationFrequency(n) {
+    var frequency = 440 * Math.pow(Math.pow(2, 1 / 12), n - 49); //n is the nth key on the piano --> 12 key equals one octave
+    return Math.floor(frequency);
+};
 
 function getFrequenzeForValue(value) {
   //console.log("value DISTANCE" + value);
