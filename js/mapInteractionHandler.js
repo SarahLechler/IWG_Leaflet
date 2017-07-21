@@ -1,6 +1,8 @@
 function visualAndSoundHighlightFeature(event) {
   var layer = event.target;
-  navigationSound.stop();
+    if(!searchesTest){
+        navigationSound.stop();
+    }
   highlightFeature(layer);
   playBorderSound();
 };
