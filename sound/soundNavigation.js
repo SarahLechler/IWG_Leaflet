@@ -16,20 +16,20 @@ const octaven = [{
     temp["frq"] = freqence
     octaven.push(temp);
   }
-  console.log(octaven)
+ // console.log(octaven)
 })();
 
 
 
 function getFrequenzeForValue(value) {
-  console.log("value DISTANCE" + value);
-  console.log("zugehörige Intervall");
-  console.log(octaven[getIntervalIndexForValue(value)]);
+  //console.log("value DISTANCE" + value);
+  //console.log("zugehörige Intervall");
+  //console.log(octaven[getIntervalIndexForValue(value)]);
   return octaven[getIntervalIndexForValue(value)].frq;
 }
 
 function getIntervalIndexForValue(value) {
-  console.log("getIntervalIndexForValue");
+  //console.log("getIntervalIndexForValue");
   // Grenzfall testen
   if (octaven[octaven.length - 1].max < value ) {
     return octaven.length - 1;
@@ -41,7 +41,7 @@ function getIntervalIndexForValue(value) {
 
 
 function binarySearchForIntervalIndex(items, value) {
-  console.log("binarySearchForIntervalIndex");
+ // console.log("binarySearchForIntervalIndex");
   var firstIndex = 0,
     lastIndex = items.length - 1,
     middleIndex = Math.floor((lastIndex + firstIndex) / 2);
@@ -59,7 +59,7 @@ function binarySearchForIntervalIndex(items, value) {
 }
 
 function valueInInterval(interval, value) {
-  console.log("valueInInterval");
+  //console.log("valueInInterval");
   let untereGrenze = interval.min <= value;
   let obereGrenze = value <= interval.max;
   return untereGrenze && obereGrenze;
@@ -103,7 +103,7 @@ function getMinimalDistanceToFeature(coordinatesArray, mouseLat, mouseLng) {
     let tempDistance = getMinimalDistanceToCoordinateGroup(element, mouseLat, mouseLng);
     distance = distance < tempDistance ? distance : tempDistance;
   });
-  console.log("getMinimalDistanceToFeature distance : " + distance)
+  //console.log("getMinimalDistanceToFeature distance : " + distance)
   return distance;
 }
 
@@ -114,7 +114,7 @@ function getMinimalDistanceToCoordinateGroup(coordinatesArray, mouseLat, mouseLn
     let tempDist = getDistanceFromLatLonInKm(element[1], element[0], mouseLat, mouseLng);
     distance = distance < tempDist ? distance : tempDist;
   });
-  console.log("getMinimalDistanceToCoordinateGroup distance : " + distance);
+ // console.log("getMinimalDistanceToCoordinateGroup distance : " + distance);
   return distance;
 };
 
