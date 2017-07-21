@@ -1978,7 +1978,7 @@ let statesData = {
       "properties": {
         "scale": "rational",
         "name": "Illinois",
-        "value": 39,
+        "value": null,
         "bottomValue": 23,
         "unit": "people per squarekilometer"
       },
@@ -4206,7 +4206,7 @@ let statesData = {
       "properties": {
         "scale": "rational",
         "name": "Vermont",
-        "value": 23,
+        "value": null,
         "bottomValue": 36,
         "unit": "people per squarekilometer"
       },
