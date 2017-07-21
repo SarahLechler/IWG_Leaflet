@@ -1,35 +1,40 @@
 const octaven = [{
   min: 0,
   max: 10,
-  frq: 200
+  frq: navigationFrequency(20)
 }];
 
 (function() {
   let freqence = 200
   let add = 0;
-  for (let i = 10; i < 2500; i = i + 10) {
+  let addOct = 24;
+  for (let i = 10; i < 600; i = i + 10) {
     let temp = {};
     temp["min"] = i + 1;
     add = add + 10;
     temp["max"] = i + add;
-    freqence = freqence + 10;
+    freqence = navigationFrequency(addOct);
+    addOct += 1;
     temp["frq"] = freqence
     octaven.push(temp);
   }
-  console.log(octaven)
+ // console.log(octaven)
 })();
 
-
+function navigationFrequency(n) {
+    var frequency = 440 * Math.pow(Math.pow(2, 1 / 12), n - 49); //n is the nth key on the piano --> 12 key equals one octave
+    return Math.floor(frequency);
+};
 
 function getFrequenzeForValue(value) {
-  console.log("value DISTANCE" + value);
-  console.log("zugehörige Intervall");
-  console.log(octaven[getIntervalIndexForValue(value)]);
+  //console.log("value DISTANCE" + value);
+  //console.log("zugehörige Intervall");
+  //console.log(octaven[getIntervalIndexForValue(value)]);
   return octaven[getIntervalIndexForValue(value)].frq;
 }
 
 function getIntervalIndexForValue(value) {
-  console.log("getIntervalIndexForValue");
+  //console.log("getIntervalIndexForValue");
   // Grenzfall testen
   if (octaven[octaven.length - 1].max < value ) {
     return octaven.length - 1;
@@ -41,7 +46,7 @@ function getIntervalIndexForValue(value) {
 
 
 function binarySearchForIntervalIndex(items, value) {
-  console.log("binarySearchForIntervalIndex");
+ // console.log("binarySearchForIntervalIndex");
   var firstIndex = 0,
     lastIndex = items.length - 1,
     middleIndex = Math.floor((lastIndex + firstIndex) / 2);
@@ -59,7 +64,7 @@ function binarySearchForIntervalIndex(items, value) {
 }
 
 function valueInInterval(interval, value) {
-  console.log("valueInInterval");
+  //console.log("valueInInterval");
   let untereGrenze = interval.min <= value;
   let obereGrenze = value <= interval.max;
   return untereGrenze && obereGrenze;
@@ -103,7 +108,7 @@ function getMinimalDistanceToFeature(coordinatesArray, mouseLat, mouseLng) {
     let tempDistance = getMinimalDistanceToCoordinateGroup(element, mouseLat, mouseLng);
     distance = distance < tempDistance ? distance : tempDistance;
   });
-  console.log("getMinimalDistanceToFeature distance : " + distance)
+  //console.log("getMinimalDistanceToFeature distance : " + distance)
   return distance;
 }
 
@@ -114,7 +119,7 @@ function getMinimalDistanceToCoordinateGroup(coordinatesArray, mouseLat, mouseLn
     let tempDist = getDistanceFromLatLonInKm(element[1], element[0], mouseLat, mouseLng);
     distance = distance < tempDist ? distance : tempDist;
   });
-  console.log("getMinimalDistanceToCoordinateGroup distance : " + distance);
+ // console.log("getMinimalDistanceToCoordinateGroup distance : " + distance);
   return distance;
 };
 
