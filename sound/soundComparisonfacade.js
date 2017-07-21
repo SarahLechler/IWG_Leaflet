@@ -5,6 +5,7 @@
 function comparingTopBottom(bottomValue, topValue, bbox, curserPosition) {
   try {
       if(curserPosition) {
+          
     create2Sounds(bottomValue, topValue, audiocontext.currentTime, audiocontext.currentTime+0.5, 1, -1)
       }
       else { // No 2.5 sound output

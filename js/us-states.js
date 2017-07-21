@@ -9,8 +9,8 @@ let statesData = {
         "scale": "rational",
         "scale": "rational",
         "name": "Alabama",
-        "value": 11,
-        "bottomValue": 11,
+        "value": 23,
+        "bottomValue": 23,
         "unit": "people per squarekilometer"
       },
       "geometry": {
@@ -1411,7 +1411,7 @@ let statesData = {
       "properties": {
         "scale": "rational",
         "name": "California",
-        "value": 19,
+        "value": 25,
         "bottomValue": 36,
         "unit": "people per squarekilometer"
       },
@@ -1522,8 +1522,8 @@ let statesData = {
       "properties": {
         "scale": "rational",
         "name": "Colorado",
-        "value": 30,
-        "bottomValue": 15,
+        "value": 38,
+        "bottomValue": 23,
         "unit": "people per squarekilometer"
       },
       "geometry": {
@@ -1590,8 +1590,8 @@ let statesData = {
       "properties": {
         "scale": "rational",
         "name": "Delaware",
-        "value": 20,
-        "bottomValue": 25,
+        "value": 27,
+        "bottomValue": 31,
         "unit": "people per squarekilometer"
       },
       "geometry": {
@@ -1621,8 +1621,8 @@ let statesData = {
       "properties": {
         "scale": "rational",
         "name": "District of Columbia",
-        "value": 11,
-        "bottomValue": 14,
+        "value": 23,
+        "bottomValue": 26,
         "unit": "people per squarekilometer"
       },
       "geometry": {
@@ -1894,7 +1894,7 @@ let statesData = {
       "properties": {
         "scale": "rational",
         "name": "Idaho",
-        "value": 19,
+        "value": 24,
         "bottomValue":  64,
         "unit": "people per squarekilometer"
       },
@@ -1978,8 +1978,8 @@ let statesData = {
       "properties": {
         "scale": "rational",
         "name": "Illinois",
-        "value": 37,
-        "bottomValue": 4,
+        "value": 39,
+        "bottomValue": 23,
         "unit": "people per squarekilometer"
       },
       "geometry": {
@@ -2063,8 +2063,8 @@ let statesData = {
       "properties": {
         "scale": "rational",
         "name": "Indiana",
-        "value": 9,
-        "bottomValue":  10,
+        "value": 23,
+        "bottomValue":  24,
         "unit": "people per squarekilometer"
       },
       "geometry": {
@@ -2127,8 +2127,8 @@ let statesData = {
       "properties": {
         "scale": "rational",
         "name": "Iowa",
-        "value": 20,
-        "bottomValue": 21,
+        "value": 24,
+        "bottomValue": 25,
         "unit": "people per squarekilometer"
       },
       "geometry": {
@@ -2226,8 +2226,8 @@ let statesData = {
       "properties": {
         "scale": "rational",
         "name": "Kentucky",
-        "value": 5,
-        "bottomValue": 5,
+        "value": 23,
+        "bottomValue": 23,
         "unit": "people per squarekilometer"
       },
       "geometry": {
@@ -2498,7 +2498,7 @@ let statesData = {
         "scale": "rational",
         "name": "Maryland",
         "value": 25,
-        "bottomValue": 20,
+        "bottomValue": 23,
         "unit": "people per squarekilometer"
       },
       "geometry": {
@@ -2585,8 +2585,8 @@ let statesData = {
       "properties": {
         "scale": "rational",
         "name": "Massachusetts",
-        "value": 8,
-        "bottomValue": 10,
+        "value": 23,
+        "bottomValue": 26,
         "unit": "people per squarekilometer"
       },
       "geometry": {
@@ -2822,8 +2822,8 @@ let statesData = {
       "properties": {
         "scale": "rational",
         "name": "Minnesota",
-        "value": 9,
-        "bottomValue" : 14,
+        "value": 28,
+        "bottomValue" : 32,
         "unit": "people per squarekilometer"
       },
       "geometry": {
@@ -2923,8 +2923,8 @@ let statesData = {
       "properties": {
         "scale": "rational",
         "name": "Mississippi",
-        "value": 20,
-        "bottomValue": 25,
+        "value": 22,
+        "bottomValue": 28,
         "unit": "people per squarekilometer"
       },
       "geometry": {
@@ -3058,8 +3058,8 @@ let statesData = {
       "properties": {
         "scale": "rational",
         "name": "Montana",
-        "value": 9,
-        "bottomValue": 11,
+        "value": 23,
+        "bottomValue": 36,
         "unit": "people per squarekilometer"
       },
       "geometry": {
@@ -3128,8 +3128,8 @@ let statesData = {
       "properties": {
         "scale": "rational",
         "name": "Nebraska",
-        "value": 20,
-        "bottomValue": 22,
+        "value": 27,
+        "bottomValue": 29,
         "unit": "people per squarekilometer"
       },
       "geometry": {
@@ -3215,7 +3215,7 @@ let statesData = {
         "scale": "rational",
         "name": "New Hampshire",
         "value": 68,
-        "bottomValue": 13,
+        "bottomValue": 23,
         "unit": "people per squarekilometer"
       },
       "geometry": {
@@ -3260,8 +3260,8 @@ let statesData = {
       "properties": {
         "scale": "rational",
         "name": "New Jersey",
-        "value": 9,
-        "bottomValue": 12,
+        "value": 22,
+        "bottomValue": 32,
         "unit": "people per squarekilometer"
       },
       "geometry": {
@@ -3310,8 +3310,8 @@ let statesData = {
       "properties": {
         "scale": "rational",
         "name": "New Mexico",
-        "value": 20,
-        "bottomValue": 23,
+        "value": 24,
+        "bottomValue": 27,
         "unit": "people per squarekilometer"
       },
       "geometry": {
@@ -3431,8 +3431,8 @@ let statesData = {
       "properties": {
         "scale": "rational",
         "name": "North Carolina",
-        "value": 9,
-        "bottomValue": 13,
+        "value": 23,
+        "bottomValue": 33,
         "unit": "people per squarekilometer"
       },
       "geometry": {
@@ -3609,8 +3609,8 @@ let statesData = {
       "properties": {
         "scale": "rational",
         "name": "Oklahoma",
-        "value": 55.22,
-        "bottomValue":  8,
+        "value": 55,
+        "bottomValue":  24,
         "unit": "people per squarekilometer"
       },
       "geometry": {
@@ -3672,7 +3672,7 @@ let statesData = {
       "properties": {
         "scale": "rational",
         "name": "Oregon",
-        "value": 13,
+        "value": 23,
         "bottomValue": 48,
         "unit": "people per squarekilometer"
       },
@@ -3798,7 +3798,7 @@ let statesData = {
         "scale": "rational",
         "name": "Rhode Island",
         "value": 36,
-        "bottomValue": 18,
+        "bottomValue": 22,
         "unit": "people per squarekilometer"
       },
       "geometry": {
@@ -3836,8 +3836,8 @@ let statesData = {
       "properties": {
         "scale": "rational",
         "name": "South Carolina",
-        "value": 3,
-        "bottomValue": 4,
+        "value": 23,
+        "bottomValue": 28,
         "unit": "people per squarekilometer"
       },
       "geometry": {
@@ -3898,8 +3898,8 @@ let statesData = {
       "properties": {
         "scale": "rational",
         "name": "South Dakota",
-        "value": 9,
-        "bottomValue": 37,
+        "value": 24,
+        "bottomValue": 57,
         "unit": "people per squarekilometer"
       },
       "geometry": {
@@ -3945,8 +3945,8 @@ let statesData = {
       "properties": {
         "scale": "rational",
         "name": "Tennessee",
-        "value": 15,
-        "bottomValue": 27,
+        "value": 25,
+        "bottomValue": 37,
         "unit": "people per squarekilometer"
       },
       "geometry": {
@@ -4176,8 +4176,8 @@ let statesData = {
       "properties": {
         "scale": "rational",
         "name": "Utah",
-        "value": 18,
-        "bottomValue": 4,
+        "value": 26,
+        "bottomValue": 28,
         "unit": "people per squarekilometer"
       },
       "geometry": {
@@ -4206,7 +4206,7 @@ let statesData = {
       "properties": {
         "scale": "rational",
         "name": "Vermont",
-        "value": 7,
+        "value": 23,
         "bottomValue": 36,
         "unit": "people per squarekilometer"
       },

@@ -29,7 +29,7 @@ function createSound(pianoKey, startTime, endTime, direction) { // startTime is 
 ;
 
 function calculateFrequency(n) {
-    var frequency = 440 * Math.pow(Math.pow(2, 1 / 12), n - 49) + 12; //n is the nth key on the piano --> 12 key equals one octave
+    var frequency = 440 * Math.pow(Math.pow(2, 1 / 12), n - 49 +12 ) ; //n is the nth key on the piano --> 12 key equals one octave
     console.log(frequency);
     return frequency;
 }
