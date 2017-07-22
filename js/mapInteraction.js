@@ -26,27 +26,24 @@ var mapsToBeCompared = {// stores the leaflet-GeoJson and the raw GeoJson. Want 
 
 var searches = function () {
     isSearching = true;
-}
+};
 
 var notSearching = function () {
     isSearching = false;
-}
+};
 
 $(document).on("keypress", function (e) {
+    console.log("key pressed");
     var code = e.keyCode || e.which;
-    console.log(code)
-
-
-
-
+    console.log(code);
 
     //if (isSearching == true) {
     //  return;
     //}
-    if (code == 105 && !searchNavi) { //73 stands for 'i' like informaion
+    if (code === 105 && !searchNavi) { //73 stands for 'i' like informaion
         responsiveVoice.speak("First Map, countries of the united states. Property, people per squarekilometer. Secound Map, countries of the united states");
     }
-    if (code == 109) { //68 stands for 'm'
+    if (code === 109) { //68 stands for 'm'
         if (dragging) {
             map.dragging.disable();
             map.setView([37.8, -96], 4);
@@ -64,7 +61,7 @@ $(document).on("keypress", function (e) {
     } else
 
     if (code === 13) {
-        if (document.getElementById("myInput").focus == true) {
+        if (document.getElementById("myInput").focus === true) {
             console.log("hallo");
             console.log(document.getElementById(myTable));
 
@@ -151,11 +148,14 @@ $(document).on("keypress", function (e) {
         //#################################################################################################################
 
     } else if (code===111){ //o for output
+        pressedKeys.compare = false;
             pressedKeys.output = !pressedKeys.output;
             console.log("Voice output on");
     } else if (code ===99){
+         pressedKeys.output = false;
         pressedKeys.compare = !pressedKeys.compare;
         console.log("comparing on");
+        console.log(pressedKeys);
     }
     ;
 });

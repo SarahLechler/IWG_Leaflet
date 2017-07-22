@@ -9,8 +9,8 @@ let statesData = {
         "scale": "rational",
         "scale": "rational",
         "name": "Alabama",
-        "value": 23,
-        "bottomValue": 23,
+        "value": 13,
+        "bottomValue": 76,
         "unit": "people per squarekilometer"
       },
       "geometry": {
@@ -1411,7 +1411,7 @@ let statesData = {
       "properties": {
         "scale": "rational",
         "name": "California",
-        "value": 25,
+        "value": 27,
         "bottomValue": 36,
         "unit": "people per squarekilometer"
       },
@@ -1556,8 +1556,8 @@ let statesData = {
       "properties": {
         "scale": "rational",
         "name": "Connecticut",
-        "value": 24,
-        "bottomValue": 30,
+        "value": 26,
+        "bottomValue": 36,
         "unit": "people per squarekilometer"
       },
       "geometry": {
@@ -1622,7 +1622,7 @@ let statesData = {
         "scale": "rational",
         "name": "District of Columbia",
         "value": 23,
-        "bottomValue": 26,
+        "bottomValue": 0,
         "unit": "people per squarekilometer"
       },
       "geometry": {
@@ -1740,8 +1740,8 @@ let statesData = {
       "properties": {
         "scale": "rational",
         "name": "Georgia",
-        "value": 27,
-        "bottomValue": 56,
+        "value": 56,
+        "bottomValue": 0,
         "unit": "people per squarekilometer"
       },
       "geometry": {
@@ -1978,7 +1978,7 @@ let statesData = {
       "properties": {
         "scale": "rational",
         "name": "Illinois",
-        "value": null,
+        "value": 39,
         "bottomValue": 23,
         "unit": "people per squarekilometer"
       },
@@ -3260,8 +3260,8 @@ let statesData = {
       "properties": {
         "scale": "rational",
         "name": "New Jersey",
-        "value": 22,
-        "bottomValue": 32,
+        "value": 32,
+        "bottomValue": 22,
         "unit": "people per squarekilometer"
       },
       "geometry": {
@@ -4206,7 +4206,7 @@ let statesData = {
       "properties": {
         "scale": "rational",
         "name": "Vermont",
-        "value": null,
+        "value": 23,
         "bottomValue": 36,
         "unit": "people per squarekilometer"
       },

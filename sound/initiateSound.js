@@ -1,27 +1,26 @@
 var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audiocontext = new AudioContext();
-var dimension = audiocontext.createStereoPanner();
+var audiocntxt = new AudioContext();
+var dimension = audiocntxt.createStereoPanner();
 
 function createSound(pianoKey, startTime, endTime, direction) { // startTime is always audiocontext.currentTime and endTime audiocontext.currentTime + how long it should be played
     if (pianoKey === null) {
         createWhiteNoise(startTime, endTime);
     } else {
-        var g = audiocontext.createGain();
-        g.gain.exponentialRampToValueAtTime(1.0/*0.00001*/, audiocontext.currentTime + 0.04);
+        var g = audiocntxt.createGain();
+        g.gain.exponentialRampToValueAtTime(1.0/*0.00001*/, audiocntxt.currentTime + 0.04);
         createDimension(direction);
-        var sound = audiocontext.createOscillator();
+        var sound = audiocntxt.createOscillator();
         sound.channelCountMode = "clamped-max";
         sound.channelCount = "2";
         sound.channelInterpretation = "speakers";
         sound.type = "sine"; // sine wave — other values are 'square', 'sawtooth', 'triangle' and 'custom'
-        sound.connect(audiocontext.destination);
+        
         sound.frequency.value = calculateFrequency(pianoKey);
         console.log(sound);
         sound.connect(g);
-
         sound.connect(dimension);
-        dimension.connect(audiocontext.destination);
-
+        dimension.connect(audiocntxt.destination);
+        sound.connect(audiocntxt.destination);
         sound.start(startTime);
         sound.stop(endTime);
     }
@@ -36,19 +35,19 @@ function calculateFrequency(n) {
 ;
 
 function createWhiteNoise(startTime, endTime) {
-    var bufferSize = 2 * audiocontext.sampleRate,
-            noiseBuffer = audiocontext.createBuffer(1, bufferSize, audiocontext.sampleRate),
+    var bufferSize = 2 * audiocntxt.sampleRate,
+            noiseBuffer = audiocntxt.createBuffer(1, bufferSize, audiocntxt.sampleRate),
             output = noiseBuffer.getChannelData(0);
     for (var i = 0; i < bufferSize; i++) {
         output[i] = Math.random() * 2 - 1;
     }
 
-    var whiteNoise = audiocontext.createBufferSource();
+    var whiteNoise = audiocntxt.createBufferSource();
     whiteNoise.buffer = noiseBuffer;
     whiteNoise.loop = true;
     whiteNoise.start(startTime);
 
-    whiteNoise.connect(audiocontext.destination);
+    whiteNoise.connect(audiocntxt.destination);
     whiteNoise.stop(endTime);
 }
 ;

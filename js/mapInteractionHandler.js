@@ -4,7 +4,7 @@ function visualAndSoundHighlightFeature(event) {
         navigationSound.stop();
     }
     highlightFeature(layer);
-    playBorderSound();
+    //playBorderSound();
     console.log(pressedKeys);
     let topValue = layer.feature.properties.value;
     let bottomValue = layer.feature.properties.bottomValue
@@ -18,9 +18,9 @@ function visualAndSoundHighlightFeature(event) {
             sayPropertyName(layer);
             sayPropertyValueAndUnit(layer);
     } else if (pressedKeys.compare){
-        create2Sounds(topValue, bottomValue, audiocontext.currentTime, audiocontext.currentTime + 0.5, 1, -1);
+        create2Sounds(topValue, bottomValue, audiocntxt.currentTime, audiocntxt.currentTime + 0.5, 1, -1);
     } else {
-        createSound(topValue, audiocontext.currentTime, audiocontext.currentTime + 0.5, 0)
+        createSound(topValue, audiocntxt.currentTime, audiocntxt.currentTime + 0.5, 0)
 
     }
 }
