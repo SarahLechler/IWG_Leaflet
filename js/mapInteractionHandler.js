@@ -4,7 +4,7 @@ function visualAndSoundHighlightFeature(event) {
     navigationSound.stop();
   }
   highlightFeature(layer);
-  //playBorderSound();
+  playBorderSound();
   console.log(pressedKeys);
   let topValue = layer.feature.properties.value;
   let bottomValue = layer.feature.properties.bottomValue
