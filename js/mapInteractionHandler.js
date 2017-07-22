@@ -43,23 +43,10 @@ function compareFeatures(event) {
         responsiveVoice.speak("equal");
      }
        responsiveVoice.speak("not equal");
-  } //else if (pressedKeys.greater) {
-  //   checkScaleForCalculation(event, "greater");
-  //   greaterTopBottomFratureValues(event);
-  // } else if (pressedKeys.smaller) {
-  //   checkScaleForCalculation(event, "smaller");
-  //   smallerTopBottomFratureValues(event);
-  // } else if (pressedKeys.add) {
-  //   checkScaleForCalculation(event, "add");
-  //   console.log("ADDITION IS DISABLED DUE TO SAFTY");
-  //   //singleValueToSound(addTopBottomFratureValues(event));
-  // } else if (pressedKeys.quotient) {
-  //   checkScaleForCalculation(event, "quotient");
-  //   singleValueToSound(quotientTopBottomFratureValues(event));
-  // } else if (pressedKey.output) {
-  //   sayPropertyName(layer);
-  //   sayPropertyValueAndUnit(layer);
-  // }
+  }  else if (pressedKeys.output) {
+    sayPropertyName(layer);
+    sayPropertyValueAndUnit(layer);
+  }
   else {
     let topValue = layer.feature.properties.value;
     let bottomValue = layer.feature.properties.bottomValue;
