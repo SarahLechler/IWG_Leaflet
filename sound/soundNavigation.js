@@ -5,7 +5,7 @@ const octaven = [{
 }];
 
 (function() {
-  let freqence = 200
+  let freqence = 200;
   let add = 0;
   let addOct = 24;
   for (let i = 10; i < 600; i = i + 10) {
@@ -15,7 +15,7 @@ const octaven = [{
     temp["max"] = i + add;
     freqence = navigationFrequency(addOct);
     addOct += 1;
-    temp["frq"] = freqence
+    temp["frq"] = freqence;
     octaven.push(temp);
   }
  // console.log(octaven)

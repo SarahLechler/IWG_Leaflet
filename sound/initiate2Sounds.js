@@ -38,9 +38,9 @@ function create2Sounds(pianoKey1, pianoKey2, startTime, endTime, direction1, dir
         dimension2.connect(audiocontext.destination);
 
         sound1.start(startTime);
-        sound2.start(startTime);
+        sound2.start(startTime + 0.5);
         sound1.stop(endTime);
-        sound2.stop(endTime);
+        sound2.stop(endTime + 0.5);
     }
 
 }
