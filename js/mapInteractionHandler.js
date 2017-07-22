@@ -14,10 +14,10 @@ function visualAndSoundHighlightFeature(event) {
   if (!bottomValue) {
     throw new Error("Property bottomValue is undefined");
   }
-  if (pressedKeys.output) {
-    sayPropertyName(layer);
-    sayPropertyValueAndUnit(layer);
-  } //else  (pressedKeys.compare){
+  // if (pressedKeys.output) {
+  //   sayPropertyName(layer);
+  //   sayPropertyValueAndUnit(layer);
+  // } //else  (pressedKeys.compare){
   //create2Sounds(topValue, bottomValue, audiocntxt.currentTime, audiocntxt.currentTime + 0.5, 1, -1);
   //}
   // else {
