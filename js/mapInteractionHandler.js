@@ -4,7 +4,6 @@ function visualAndSoundHighlightFeature(event) {
     navigationSound.stop();
   }
   highlightFeature(layer);
-  playBorderSound();
   console.log(pressedKeys);
   let topValue = layer.feature.properties.value;
   let bottomValue = layer.feature.properties.bottomValue
@@ -14,16 +13,27 @@ function visualAndSoundHighlightFeature(event) {
   if (!bottomValue) {
     throw new Error("Property bottomValue is undefined");
   }
-  // if (pressedKeys.output) {
-  //   sayPropertyName(layer);
-  //   sayPropertyValueAndUnit(layer);
-  // } //else  (pressedKeys.compare){
-  //create2Sounds(topValue, bottomValue, audiocntxt.currentTime, audiocntxt.currentTime + 0.5, 1, -1);
-  //}
-  // else {
-  //     createSound(topValue, audiocntxt.currentTime, audiocntxt.currentTime + 0.5, 0)
-  //
-  // }
+   if (pressedKeys.output) {
+     sayPropertyName(layer);
+     sayPropertyValueAndUnit(layer);
+   }
+   else if (pressedKeys.difference){
+      checkScaleForCalculation(event, "equal");
+      singleValueToSound(differenceTopBottomFratureValues(event));
+   }
+   else if (pressedKeys.equal){
+     checkScaleForCalculation(event, "equal");
+     if(equalityTopBottomFratureValues(event)){
+        responsiveVoice.speak("equal");
+     }
+       responsiveVoice.speak("not equal");
+   }
+   else if (pressedKeys.compare){
+  create2Sounds(topValue, bottomValue, audiocntxt.currentTime, audiocntxt.currentTime + 0.5, 1, -1);
+} else {
+    playBorderSound();
+}
+
 };
 
 function compareFeatures(event) {
@@ -52,7 +62,6 @@ function compareFeatures(event) {
     let bottomValue = layer.feature.properties.bottomValue;
     create2Sounds(topValue, bottomValue, audiocntxt.currentTime, audiocntxt.currentTime + 0.5, 1, -1);
   }
-
 
 };
 

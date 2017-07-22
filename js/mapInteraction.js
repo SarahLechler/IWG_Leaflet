@@ -149,13 +149,19 @@ $(document).on("keypress", function (e) {
         //#################################################################################################################
 
     } else if (code===111){ //o for output
-        pressedKeys.compare = false;
-            pressedKeys.output = !pressedKeys.output;
+
+      pressedKeys.output = !pressedKeys.output;
+      let storePress = pressedKeys.output;
+      setAllKeysFalse(); // Make sure that only one calculation is enabled.
+      pressedKeys.output = storePress;
             console.log("Voice output on");
     } else if (code ===99){
-         pressedKeys.output = false;
-        pressedKeys.compare = !pressedKeys.compare;
-        console.log("comparing on");
+      pressedKeys.compare = !pressedKeys.compare;
+      let storePress = pressedKeys.compare;
+      setAllKeysFalse(); // Make sure that only one calculation is enabled.
+      pressedKeys.compare = storePress;
+
+        console.log("pressedKeys.compare = " + pressedKeys.compare);
         console.log(pressedKeys);
     }
     ;
