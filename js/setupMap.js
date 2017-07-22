@@ -35,17 +35,17 @@ map.scrollWheelZoom.disable();
     navigationSound.frequency = getFrequenzeForValue(currentDistance);
 
   }else{
-      
+
       //#################################################################################################################
       //#################################################################################################################
       //#################################################################################################################
       //#################################################################################################################
-      
+
       if(pressedKeys.searchNavi){
           var country;
           var curName = document.getElementById("myInput").value;
 
-          
+
     $.each(statesData.features, function(i, v) {
         if (v.properties.name == curName) {
             country = v;
@@ -56,10 +56,10 @@ map.scrollWheelZoom.disable();
 
           let lat = ev.latlng.lat; // koordinaten von der maus?nnnn
           let lng = ev.latlng.lng;
-          
+
           //console.log("lets Go ");
           nearestFeatureToMouseOnMap=country;
-          
+
             if (!nearestFeatureToMouseOnMap) { // Calculate only onthe for eath press of n. After each press of n, nearestFeatureToMouseOnMap will be set to null
                 //nearestFeatureToMouseOnMap = getNearestFeature(lat, lng);
                 nearestFeatureToMouseOnMap = country;
@@ -69,15 +69,15 @@ map.scrollWheelZoom.disable();
           //console.log(currentDistance);
           if(currentDistance<=100){
               searchesTest=false;
-  
+
           }
     //let currentDistance = getCurrentDistanceToNearestFeature(nearestFeatureToMouseOnMap, lat, lng);
 
     getFrequenzeForValue(currentDistance);
-    navigationSound.frequency = getFrequenzeForValue(currentDistance);    
+    navigationSound.frequency = getFrequenzeForValue(currentDistance);
     }
-      
-      
+
+
       //#################################################################################################################
       //#################################################################################################################
       //#################################################################################################################
