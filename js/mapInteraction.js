@@ -74,6 +74,7 @@ $(document).on("keypress", function (e) {
         setAllKeysFalse(); // Make sure that only one calculation is enabled.
         pressedKeys.difference = storePress;
     } else if (code === 101) { // 101 stands for e like 'equal'
+    console.log("EQUAL KEY");
         pressedKeys.equal = !pressedKeys.equal;
         let storePress = pressedKeys.equal;
         setAllKeysFalse(); // Make sure that only one calculation is enabled.
