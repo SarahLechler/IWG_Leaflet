@@ -5,6 +5,7 @@ function checkScaleForCalculation(event, intendedCalculation) {
   const bottomFeature = topBottomProperties.bottomValue;
 
     if(calculationAllowedForScale(topBottomProperties.scale, intendedCalculation)){
+      console.log("CALCULATION ALLOWED");
       return true;
     }
     else {
@@ -38,6 +39,7 @@ function differenceTopBottomFratureValues(event) {
 
 function equalityTopBottomFratureValues(event) {
   try{
+    console.log("equalityTopBottomFratureValues");
     const topBottomProperties = getPropertiesOfBothFeatures(event);
     const topValue = topBottomProperties.value;
     const bottomValue = topBottomProperties.bottomValue;
@@ -114,8 +116,8 @@ function quotientTopBottomFratureValues(event) {
 
 
 let scaleNiveauCalculation = {
-  "nominal" : ["equality"],
-  "ordinal" : ["equality", "greater", "smaller"],
-  "interval" : ["equality", "greater", "smaller", "difference", "add"],
-  "rational" : ["equality", "greater", "smaller", "difference", "add", "quotient"]
+  "nominal" : ["equal"],
+  "ordinal" : ["equal", "greater", "smaller"],
+  "interval" : ["equal", "greater", "smaller", "difference", "add"],
+  "rational" : ["equal", "greater", "smaller", "difference", "add", "quotient"]
 };
